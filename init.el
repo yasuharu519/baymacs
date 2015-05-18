@@ -46,3 +46,48 @@
 
 ;; // defgroup → グループの作成
 ;; // (defgroup SYMBOL MEMBERS DOC &rest ARGS)
+
+(defconst personal-version          "0.0.1" "Personal version.")
+(defconst personal-emacs-min-version   "24.3" "Minimal version of Emacs.")
+
+(defun personal/emacs-version-ok ()
+  (version<= personal-emacs-min-version emacs-version))
+
+(when (personal/emacs-version-ok)
+  ;; ロードパスのロード
+  (load-file (concat user-emacs-directory "core/core-load-path.el"))
+  )
+
+
+(defgroup personal nil
+    "personal customizations."
+    :group 'starter-kit
+    :prefix 'personal-)
+
+
+(define-derived-mode personal-mode special-mode "Personal"
+  "Personal major mode for startup screen."
+  :group 'personal
+  :syntax-table nil
+  :abbrev-table nil
+  (setq truncate-lines t)
+  ;; motion state since this is a special mode
+  (add-to-list 'evil-motion-state-modes 'personal-mode))
+
+(defun personal/location ()
+  "Return the absolute path to the spacemacs dotfile."
+  (concat user-home-directory ".spacemacs"))
+
+(defun personal/load-file ()
+  "Load ~/.spacemacs if it exists."
+  (let ((dotspacemacs (dotspacemacs/location)))
+    (if (file-exists-p dotspacemacs) (load dotspacemacs))))
+
+(defun personal/init ()
+  "`pwersonal-mode' のバッファを作成し、初期化処理を行う"
+  ;; explicitly set the prefered coding systems to avoid annoying prompt
+  ;; from emacs (especially on Microsoft Windows)
+  (prefer-coding-system 'utf-8) ;; 優先する文字コード
+  )
+
+
