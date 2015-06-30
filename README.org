@@ -1,0 +1,9 @@
+
+* baymacs
+
+Personal emacs script
+
+** ToDo
+
+- テーマを切り替えられるように
+- スタート画面のバッファ作成
