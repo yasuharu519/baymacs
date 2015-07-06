@@ -163,12 +163,25 @@ Ensure that helm is required before calling FUNC."
     )
 
 (defun core-baymacs/init-evil ()
+  (require 'evil)
   (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
+
+  (defun move-to-splitted-window (&optional COUNT FILE)
+    "Moves the point to the newly created window after splitting."
+    (message "Splitted and move to created window.")
+    (other-window 1)
+    )
+
+  ;; window-split の後に、そのウィンドウに移動するように
+  (advice-add 'evil-window-split :after #'move-to-splitted-window)
+  (advice-add 'evil-window-vsplit :after #'move-to-splitted-window)
+
   )
 
 (defun core-baymacs/init-org ()
   (require 'org-install) ;; 初期設定
   (require 'org-capture) ;; org-remember モードが変わった
+
   (define-key global-map (kbd "C-c r") 'org-capture)
   )
 
