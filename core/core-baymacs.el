@@ -54,12 +54,13 @@ Ensure that helm is required before calling FUNC."
        (evil-leader/set-key ,keys ',func-name))))
 
 (defun core-baymacs/init-keymaps ()
+  (define-key global-map (kbd "C-;") 'helm-buffers-list)
+  
     ;; keymap
     (evil-leader/set-leader "SPC")
     
     (evil-leader/set-key
     "e" 'find-file
-    "b" 'helm-buffers-list
     "ad"  'dired
     "ab"  'helm-mini
     "ff"  'helm-find-files
