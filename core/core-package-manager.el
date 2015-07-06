@@ -31,6 +31,9 @@
     (el-get-bundle 'ac-irony)
     (el-get-bundle 'evil-jumper)
 
+    ;; web/javascript
+    (el-get-bundle 'web-mode)
+
     ;; open-junk-file
     (el-get-bundle 'open-junk-file)
     (setq open-junk-file-format (expand-file-name (concat user-org-memo-directory "%Y/%Y-%m-%d.org")))
