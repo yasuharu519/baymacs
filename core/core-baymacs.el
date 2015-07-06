@@ -162,6 +162,16 @@ Ensure that helm is required before calling FUNC."
 
     )
 
+(defun core-baymacs/init-evil ()
+  (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
+  )
+
+(defun core-baymacs/init-org ()
+  (require 'org-install) ;; 初期設定
+  (require 'org-capture) ;; org-remember モードが変わった
+  (define-key global-map (kbd "C-c r") 'org-capture)
+  )
+
 (defun core-baymacs/init ()
   (core-baymacs/init-global-mode)
   (core-baymacs/init-powerline)
@@ -169,8 +179,11 @@ Ensure that helm is required before calling FUNC."
   (core-baymacs/init-keymaps)
   (core-baymacs/init-copy-paste)
   (core-baymacs/init-magit)
+  (core-baymacs/init-evil)
+  (core-baymacs/init-org)
   )
 
 (core-baymacs/init)
+
 
 (provide 'core-baymacs)
