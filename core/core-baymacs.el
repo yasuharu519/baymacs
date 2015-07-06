@@ -153,27 +153,6 @@ Ensure that helm is required before calling FUNC."
     (evil-set-initial-state 'magit-wassup-mode 'motion)
     (evil-set-initial-state 'magit-mode 'motion)
     (evil-set-initial-state 'git-rebase-mode 'motion)
-
-(evil-set-initial-state 'magit-mode 'normal)
-(evil-set-initial-state 'magit-status-mode 'normal)
-(evil-set-initial-state 'magit-diff-mode 'normal)
-(evil-set-initial-state 'magit-log-mode 'normal)
-(evil-define-key 'normal magit-mode-map
-    "j" 'magit-goto-next-section
-    "k" 'magit-goto-previous-section)
-(evil-define-key 'normal magit-log-mode-map
-    "j" 'magit-goto-next-section
-    "k" 'magit-goto-previous-section)
-(evil-define-key 'normal magit-diff-mode-map
-    "j" 'magit-goto-next-section
-    "k" 'magit-goto-previous-section)
-
-(define-key magit-mode-map (kbd "k") #'previous-line)
-(define-key magit-untracked-section-map (kbd "k") #'previous-line)
-
-(evil-make-overriding-map magit-mode-map 'normal)
-(add-hook 'magit-mode-hook 'evil-normalize-keymaps)
-
   )
 
 (defun core-baymacs/init ()
