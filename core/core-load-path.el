@@ -37,6 +37,11 @@
 (defconst user-dropbox-directory
   (expand-file-name (concat user-home-directory "Dropbox/"))
   "Dropbox directory.")
+(defconst user-org-memo-directory
+  (expand-file-name (concat user-dropbox-directory "org-memo/"))
+  "Org file memo directory on Dropbox directory")
+(unless (file-exists-p user-org-memo-directory)
+  (make-directory user-org-memo-directory))
 
 (defconst user-backup-directory
   (expand-file-name (concat user-emacs-directory "backup"))
