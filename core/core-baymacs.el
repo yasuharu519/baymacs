@@ -153,7 +153,12 @@ Ensure that helm is required before calling FUNC."
     (evil-set-initial-state 'magit-wassup-mode 'motion)
     (evil-set-initial-state 'magit-mode 'motion)
     (evil-set-initial-state 'git-rebase-mode 'motion)
-  )
+
+    ;; set-key
+    (evil-leader/set-key
+      "gs" 'magit-status)
+
+    )
 
 (defun core-baymacs/init ()
   (core-baymacs/init-global-mode)
