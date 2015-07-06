@@ -1,3 +1,4 @@
-(setq el-get-lock-package-versions 'nil)
+(setq el-get-lock-package-versions
+      '((open-junk-file :checksum "a5643846681c672b8f95af85b4d36349879b1aad")))
 (setq el-get-lock-locked-packages 'nil)
 (setq el-get-lock-unlocked-packages 'nil)
