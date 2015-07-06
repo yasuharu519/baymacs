@@ -107,7 +107,7 @@ Ensure that helm is required before calling FUNC."
 	helm-gtags-suggested-key-mapping t
 	)
     (evil-define-key 'normal helm-gtags-mode-map (kbd "C-]") 'helm-gtags-find-tag-from-here)
-    (evil-define-key 'normal helm-gtags-mode-map (kbd "C-j") 'helm-gtags-find-tag)
+    (evil-define-key 'normal helm-gtags-mode-map (kbd "C-j") 'helm-gtags-find-pattern)
 
 
     ;; Enable helm-gtags-mode
