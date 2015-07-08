@@ -24,6 +24,7 @@
     (global-anzu-mode +1)
     (ac-config-default)
     (global-evil-jumper-mode)
+    (global-undo-tree-mode) ;; undo-treeのための設定
     )
 
 (defun core-baymacs/init-powerline ()
@@ -70,7 +71,8 @@ Ensure that helm is required before calling FUNC."
     "ab"  'helm-mini
     "ff"  'helm-find-files
     "fr"  'helm-recentf
-    ";"   'helm-M-x)
+    ";"   'helm-M-x
+    "au"  'undo-tree-visualize)
     ;; projectile
     (require 'helm-projectile)
     (setq projectile-completion-system 'helm)
