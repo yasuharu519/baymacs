@@ -23,7 +23,7 @@
     (el-get-bundle 'guide-key)
     (el-get-bundle 'magit)
     (el-get-bundle 'git-modes)
-    (el-get-bundle 'undo-tree)
+    (el-get-bundle 'undo-tree) ;; undo tree
     (el-get-bundle 'expand-region)
     (el-get-bundle 'volatile-highlights)
     (el-get-bundle 'anzu)

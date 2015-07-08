@@ -36,8 +36,13 @@
     (menu-bar-mode 0) ;; メニューバーの設定
     (tool-bar-mode 0) ;; ツールバーの設定
     (scroll-bar-mode 0) ;; スクロールバーの設定
-    (global-linum-mode t) ;; 行番号表示
     (helm-gtags-mode)
+
+    ;; linum-modeのため
+    (global-linum-mode)
+    (setq linum-delay t)
+    (defadvice linum-schedule (around my-linum-schedule () activate)
+    (run-with-idle-timer 0.5 nil #'linum-update-current))
     )
 
 (defmacro baymacs||set-helm-key (keys func)
