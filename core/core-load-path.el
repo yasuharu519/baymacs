@@ -1,5 +1,8 @@
 (defun add-to-load-path (dir) (add-to-list 'load-path dir))
 
+(defun add-personal-package-to-load-path (package)
+  (add-to-list 'load-path (concat baymacs-personal-elisps-directory (symbol-name package))))
+
 ;; path
 (defconst baymacs-core-directory
   (expand-file-name (concat user-emacs-directory "core/"))
@@ -23,7 +26,7 @@
   (expand-file-name (concat baymacs-package-directory "el-get/"))
   "Baymacs package manager directory")
 (defconst baymacs-personal-elisps-directory
-  (expand-file-name (concat baymacs-package-directory "elisps/"))
+  (expand-file-name (concat user-emacs-directory "elisps/"))
   "Baymacs package manager directory")
 
 (defconst user-home-directory
@@ -38,7 +41,7 @@
   (expand-file-name (concat user-home-directory "Dropbox/"))
   "Dropbox directory.")
 (defconst user-org-memo-directory
-  (expand-file-name (concat user-dropbox-directory "org-memo/"))
+  (expand-file-name (concat user-dropbox-directory "org/"))
   "Org file memo directory on Dropbox directory")
 (unless (file-exists-p user-org-memo-directory)
   (make-directory user-org-memo-directory))
