@@ -11,13 +11,36 @@
       evil-ex-search-vim-style-regexp t)
 
 (when (baymacs/emacs-version-ok)
+
   ;; ロードパスのロード
-  (load-file (concat user-emacs-directory "core/core-load-path.el"))
+  (load (concat user-emacs-directory "core/core-load-path.el"))
   (require 'core-package-manager)
   (baymacs/core-package-manager-init)
-  (baymacs/core-package-manager-install-packages)
+
+  (load-theme 'monokai t t)
+  (enable-theme 'monokai)
+
+  ;; init-loader
+  (require 'init-loader)
+  (custom-set-variables
+    '(init-loader-byte-compile t)
+    ;;'(init-loader-show-log-after-init 'error-only)
+    )
+  (init-loader-load (concat user-emacs-directory "init-loader"))
 
   (require 'core-baymacs)
   )
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
