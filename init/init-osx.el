@@ -25,3 +25,4 @@
 
 (global-set-key (kbd "C-:") '(lambda () (interactive) (open-init-file-buffer "init.el")))
 (global-set-key (kbd "C-\"") '(lambda () (interactive) (open-init-file-buffer "core/core-package-manager.el")))
+(global-set-key (kbd "M-a") 'mark-whole-buffer)
