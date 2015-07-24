@@ -8,9 +8,12 @@
 (defadvice linum-schedule (around my-linum-schedule () activate)
 (run-with-idle-timer 1.0 nil #'linum-update-current))
 
+;; 設定
+(setq-default indent-tabs-mode nil) ;; インデントでタブを使わない
+
 ;; doc-view の時は linum-modeを辞める
 (add-hook 'doc-view-mode-hook
-	    (lambda ()
+	  (lambda ()
 	    (linum-mode -1)
 	    (define-key global-map (kbd "C-w h") 'evil-window-left)
 	    ))
