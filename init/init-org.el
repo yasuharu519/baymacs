@@ -69,6 +69,9 @@
   (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1))) ;; アジェンダ表示で下線を用いる
 
   (global-set-key (kbd "C-S-c") '(lambda () (interactive) (baymacs/show-org-buffer "gtd.org")))
+  (global-set-key (kbd "C-c l") 'org-store-link)
+  (global-set-key (kbd "C-c a") 'org-agenda)
+  (global-set-key (kbd "C-c r") 'org-capture)
 
   )
 
