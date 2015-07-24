@@ -1,4 +1,8 @@
 (setq el-get-lock-package-versions
-      '((open-junk-file :checksum "a5643846681c672b8f95af85b4d36349879b1aad")))
+      '((clang-format :checksum "c13e49bff599923436ca620ac9e40adc708b5c5d")
+        (geiser :checksum "7866c31f267d0ecdf94ed90d2724fed20dc149dc")
+        (js2-mode :checksum "5e5df5416e74ed062d2acf39880f2f31dba9a124")
+        (web-mode :checksum "5595a3495959e4bf44f41dbf6c50889b1b49d20f")
+        (open-junk-file :checksum "a5643846681c672b8f95af85b4d36349879b1aad")))
 (setq el-get-lock-locked-packages 'nil)
 (setq el-get-lock-unlocked-packages 'nil)
