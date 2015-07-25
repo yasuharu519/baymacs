@@ -19,8 +19,27 @@
   (advice-add 'evil-window-split :after #'move-to-splitted-window)
   (advice-add 'evil-window-vsplit :after #'move-to-splitted-window)
 
+  (defun open-next-line (arg)
+    "Move to the next line and then opens a line.
+    See also `newline-and-indent'."
+    (interactive "p")
+    (save-excursion
+      (end-of-line)
+      (open-line arg)
+      (next-line 1)))
+
+  (defun open-previous-line (arg)
+    "Open a new line before the current one.
+     See also `newline-and-indent'."
+    (interactive "p")
+    (save-excursion
+      (beginning-of-line)
+      (open-line arg)))
+
   ;; key map
   (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
+  (define-key evil-normal-state-map (kbd "] SPC") 'open-next-line)
+  (define-key evil-normal-state-map (kbd "[ SPC") 'open-previous-line)
 
   )
 
