@@ -1,5 +1,11 @@
-;; Evil on
+;; Evil 関連のロード
 
+;; - evil
+;; - evil-leader
+;; - evil-jumper
+;; - evil-nerd-commenter
+
+;; evil-core
 (with-eval-after-load 'evil
   (evil-mode 1)
 
@@ -17,4 +23,25 @@
   (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
   )
 
+;; evil-leader
+(with-eval-after-load 'evil-leader
+  (global-evil-leader-mode) ;; evil-leader
+  )
+
+;; evil-jumper
+(with-eval-after-load 'evil-jumper
+  (global-evil-jumper-mode)
+  )
+
+(with-eval-after-load 'evil-nerd-commenter
+  (evilnc-default-hotkeys)
+  (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
+  (global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-lines)
+  (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
+  (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
+  )
+
 (require 'evil)
+(require 'evil-leader)
+(require 'evil-jumper)
+(require 'evil-nerd-commenter)
