@@ -26,6 +26,7 @@
     (el-get-bundle 'evil) ;; evil 本体
     (el-get-bundle 'evil-leader) ;; <leader> を使用できるように
     (el-get-bundle 'evil-jumper) ;; <C-i>, <C-o> でジャンプできるように
+    (el-get-bundle 'evil-nerd-commenter) ;; 簡単にコメント化
 
     ;; 基本パッケージ /helm
     (el-get-bundle 'helm) ;; helm 本体
@@ -67,7 +68,6 @@
     (el-get-bundle 'indent-guide) ;; インデントを縦線で表示
     (el-get-bundle 'smartparens) ;; カッコの自動挿入
     (el-get-bundle 'hl-todo) ;; TODO などをハイライト
-    (el-get-bundle 'evil-nerd-commenter) ;; 簡単にコメント化
     (el-get-bundle 'yasnippet) ;; スニペット
     (el-get-bundle 'visual-regexp) ;; 正規表現
 

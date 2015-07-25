@@ -24,7 +24,7 @@
   (require 'init-loader)
   (custom-set-variables
     '(init-loader-byte-compile t)
-    ;;'(init-loader-show-log-after-init 'error-only)
+    ;;'(init-loader-show-log-after-init 'error-only) ;; エラーだけ表示
     )
   (init-loader-load (concat user-emacs-directory "init-loader"))
 
