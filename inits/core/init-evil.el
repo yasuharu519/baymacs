@@ -38,11 +38,7 @@
   (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
   )
 
-(defun after-all-loads ()
-  (require 'evil)
-  (require 'evil-leader)
-  (require 'evil-jumper)
-  (require 'evil-nerd-commenter)
-  )
-
-(add-hook 'after-init-hook 'after-all-loads)
+(require 'evil)
+(require 'evil-leader)
+(require 'evil-jumper)
+(require 'evil-nerd-commenter)
