@@ -36,6 +36,7 @@
     (el-get-bundle 'magit)
     (el-get-bundle 'git-modes) ;; gitattributes-mode, gitconfig-mode, gitignore-mode を提供
     ;; (el-get-bundle 'magit-gh-pulls) <- 現状 Enterpriseには対応してなさそう
+    (el-get-bundle 'git-gutter) ;; git-gutter
 
     ;; 基本パッケージ /エディタ
     (el-get-bundle 'expand-region) ;; リージョンを広げるコマンドの提供
@@ -94,8 +95,10 @@
     (el-get-bundle 'haskell-mode)
     (el-get-bundle 'hi2)
 
+    ;; ===============================================================================
     ;; その他
-    ;; ///////////////////////////////////////////////////////////////////
+    ;; ===============================================================================
+
     (el-get-bundle 'open-junk-file) ;; 一時ファイルを作成
     (setq open-junk-file-format (expand-file-name (concat user-org-memo-directory "%Y/%Y-%m-%d.org")))
 
@@ -106,17 +109,16 @@
     (el-get-bundle 'yuttie/initchart)
 
 
-    ;; Libraries
+    ;; その他 /Libraries
     (el-get-bundle 'shackle)
     (el-get-bundle 'restclient)
     (el-get-bundle 'tkf/emacs-request) ;; リクエスト送信を簡単にするライブラリ
 
-    ;; misc
+    ;; テスト
     (el-get-bundle 'helm-dash) ;; Dashリファレンスをemacsから
     (el-get-bundle 'dired-plus) ;; dired の改良版
-    (el-get-bundle 'git-gutter) ;; git-gutter
 
-    (add-personal-package-to-load-path 'emacs-aoj) ;; ドキュメント検索ツール Dashとの連携
+    (add-personal-package-to-load-path 'emacs-aoj) ;; aoj連携 (開発中)
   )
 
 (provide 'core-package-manager)
