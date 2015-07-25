@@ -1,1 +1,1 @@
-../init/init-js2-mode.el
+../inits/language/init-js2-mode.el

@@ -1,1 +1,1 @@
-../init/init-osx.el
+../inits/environment/init-osx.el

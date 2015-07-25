@@ -1,1 +1,1 @@
-../init/init-evil.el
+../inits/core/init-evil.el

@@ -1,1 +1,1 @@
-../init/init-irony.el
+../inits/language/init-irony.el

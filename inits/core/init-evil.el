@@ -21,6 +21,7 @@
 
   ;; key map
   (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
+
   )
 
 ;; evil-leader
@@ -41,7 +42,11 @@
   (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
   )
 
-(require 'evil)
-(require 'evil-leader)
-(require 'evil-jumper)
-(require 'evil-nerd-commenter)
+(defun after-all-loads ()
+  (require 'evil)
+  (require 'evil-leader)
+  (require 'evil-jumper)
+  (require 'evil-nerd-commenter)
+  )
+
+(add-hook 'after-init-hook 'after-all-loads)

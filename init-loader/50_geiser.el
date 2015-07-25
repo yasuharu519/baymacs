@@ -1,1 +1,1 @@
-../init/init-geiser.el
+../inits/language/init-geiser.el
