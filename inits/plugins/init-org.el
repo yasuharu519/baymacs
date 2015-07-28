@@ -2,10 +2,13 @@
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
+(with-eval-after-load 'org-mode
+  (setq org-indent-mode t) ;; インデントモード
+  (setq org-startup-indented t) ;; 常にインデントするように
+  )
+
 (custom-set-variables
   '(org-hide-leading-stars t) ;; 見出しの余分な*を消す
-  '(org-indent-mode t) ;; インデントモード
-  '(org-startup-indented t) ;; インデント
   '(org-directory user-org-memo-directory) ;; org-default-notes-filesのディレクトリ
   '(org-agenda-files (list user-org-memo-directory)) ;; アジェンダ表示対象ファイル
   '(org-default-notes-file "gtd.org") ;; org-default-notes-fileのファイル名
