@@ -94,6 +94,9 @@
     ;; プログラミング /haskell
     (el-get-bundle 'haskell-mode)
     (el-get-bundle 'hi2)
+    (el-get-bundle 'hindent)
+    (el-get-bundle 'ghc-mod)
+    (el-get-bundle 'shm)
 
     ;; ===============================================================================
     ;; その他

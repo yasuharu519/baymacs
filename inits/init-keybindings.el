@@ -40,6 +40,10 @@ Ensure that helm is required before calling FUNC."
 ;; C++
 (evil-define-key 'insert c++-mode-map (kbd "C-l") (lambda () (interactive)
 						    (insert "->")))
+
+;; haskell
+(evil-define-key 'insert haskell-mode-map (kbd "C-l") (lambda () (interactive)
+						    (insert "->")))
 ;; Enable helm-gtags-mode
 (baymacs||set-helm-key "hdb" describe-bindings)
 (baymacs||set-helm-key "hdc" describe-char)
