@@ -33,8 +33,6 @@
 (defun baymacs/setup-ac-irony ()
   (require 'auto-complete)
   (require 'ac-irony)
-  (require 'ggtags)
-  (ggtags-mode 1)
   (auto-complete-mode)
 
   (add-to-list 'ac-sources 'ac-source-irony)
