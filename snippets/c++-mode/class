@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
 # name: class
-# key: cls
+# key: class
 # --
-class ${1:Name}
+class ${1:`(file-name-sans-extension (buffer-name))`} : ${2:Parent}
 {
 public:
     ${1:$(yas/substr yas-text "[^: ]*")}();

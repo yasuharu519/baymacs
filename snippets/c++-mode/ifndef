@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ifndef
+# key: ifndef
+# --
+#ifndef ${1:`(s-join "_" (cdr (split-string (upcase (replace-regexp-in-string "\\/" "_" (replace-regexp-in-string "\\." "_" (file-relative-name (buffer-file-name) (projectile-project-root))))) "_")))`}
+#define $1
+$0
+
+#endif // $1
