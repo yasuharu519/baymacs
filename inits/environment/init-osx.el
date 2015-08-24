@@ -26,3 +26,8 @@
 (global-set-key (kbd "C-:") '(lambda () (interactive) (open-init-file-buffer "init.el")))
 (global-set-key (kbd "C-\"") '(lambda () (interactive) (open-init-file-buffer "core/core-package-manager.el")))
 (global-set-key (kbd "M-a") 'mark-whole-buffer)
+
+;; yank/paste
+(evil-define-key 'visual global-map (kbd "M-c") 'evil-yank)
+(evil-define-key 'normal global-map (kbd "M-v") 'evil-paste-after)
+(evil-define-key 'insert global-map (kbd "M-v") 'evil-paste-after)
