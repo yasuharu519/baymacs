@@ -15,7 +15,6 @@
 (add-hook 'doc-view-mode-hook
 	  (lambda ()
 	    (linum-mode -1)
-	    (define-key global-map (kbd "C-w h") 'evil-window-left)
 	    ))
 
 (provide 'core-baymacs)
