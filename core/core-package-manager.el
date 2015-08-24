@@ -1,7 +1,3 @@
-(setq personal-packages
-      '(emacs-aoj
-	))
-
 (defun baymacs/core-package-manager-init ()
     (unless (require 'el-get nil 'noerror)
     (with-current-buffer
@@ -111,17 +107,20 @@
     ;; http://qiita.com/yuttie/items/0f38870817c11b2166bd
     (el-get-bundle 'yuttie/initchart)
 
-
     ;; その他 /Libraries
     (el-get-bundle 'shackle)
     (el-get-bundle 'restclient)
     (el-get-bundle 'tkf/emacs-request) ;; リクエスト送信を簡単にするライブラリ
+    (el-get-bundle 'flim) ;; sha1 変換関数などのライブラリ
+
 
     ;; テスト
     (el-get-bundle 'helm-dash) ;; Dashリファレンスをemacsから
     (el-get-bundle 'dired-plus) ;; dired の改良版
-
+    (el-get-bundle 'exec-path-from-shell) ;; 環境変数を引き継ぐ
     (add-personal-package-to-load-path 'emacs-aoj) ;; aoj連携 (開発中)
+    (add-personal-package-to-load-path 'hatena-blog) ;; はてなブログ連携
+    (require 'dayone)
   )
 
 (provide 'core-package-manager)
