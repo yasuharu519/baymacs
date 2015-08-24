@@ -13,6 +13,7 @@ default:
 	ln -s ../inits/plugins/init-emacs-aoj.el 40_emacs-aoj.el
 	ln -s ../inits/plugins/init-eww.el 40_eww.el
 	ln -s ../inits/plugins/init-org.el 40_org.el
+	ln -s ../inits/plugins/init-hatena-blog.el 40_hatena-blog.el
 	ln -s ../inits/language/init-c++-mode.el 50_c++-mode.el
 	ln -s ../inits/language/init-geiser.el 50_geiser.el
 	ln -s ../inits/language/init-haskell-mode.el 50_haskell-mode.el

@@ -1,0 +1,1 @@
+../inits/plugins/init-hatena-blog.el
