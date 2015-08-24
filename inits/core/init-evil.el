@@ -6,6 +6,10 @@
 ;; - evil-nerd-commenter
 
 ;; evil-core
+(custom-set-variables
+ '(evil-cross-lines t)
+ )
+
 (with-eval-after-load 'evil
   (evil-mode 1)
 
@@ -41,6 +45,8 @@
   (define-key evil-normal-state-map (kbd "] SPC") 'open-next-line)
   (define-key evil-normal-state-map (kbd "[ SPC") 'open-previous-line)
 
+  (define-key evil-normal-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+  (define-key evil-normal-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
   )
 
 ;; evil-leader
