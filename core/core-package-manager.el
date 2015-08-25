@@ -75,6 +75,7 @@
     ;;  - DLIBCLANG_LIBRARY=/usr/local/opt/llvm36/lib/llvm-3.6/lib/libclang.dylib.
     (el-get-bundle 'irony) ;; C++ 補完エンジン
     (el-get-bundle 'ac-irony) ;; C++ の irony の補完
+    (el-get-bundle 'clang-format)
 
     ;; プログラミング /Scheme
     (el-get-bundle 'geiser) ;; Racket(scheme実装) 環境
