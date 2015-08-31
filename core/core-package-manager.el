@@ -116,8 +116,11 @@
 
 
     ;; テスト
+    (el-get-bundle 'markdown-mode) ;; markdown 表示
     (el-get-bundle 'helm-dash) ;; Dashリファレンスをemacsから
     (el-get-bundle 'dired-plus) ;; dired の改良版
+    (el-get-bundle 'cmake-mode) ;; cmake
+    (el-get-bundle 'ac-emoji) ;; auto-complete の 絵文字コンプリート
     (el-get-bundle 'exec-path-from-shell) ;; 環境変数を引き継ぐ
     (add-personal-package-to-load-path 'emacs-aoj) ;; aoj連携 (開発中)
     (add-personal-package-to-load-path 'hatena-blog) ;; はてなブログ連携
