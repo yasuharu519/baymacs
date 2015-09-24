@@ -39,13 +39,8 @@
 ;; define face
 
 (defface hatena-blog/list-delete
-  '((t (:background "hotpink" :foreground "black")))
-  "Face for list item marked as to delete."
-  :group 'hatena-blog)
-
-(defface hatena-blog/list-test
   '((t (:inherit error)))
-  "Face for list item test"
+  "Face for list item marked as to delete."
   :group 'hatena-blog)
 
 (defface hatea-blog/list-publish
@@ -132,7 +127,7 @@
   "List Hatena::Diary blog entries in a buffer."
   (interactive "P")
   (switch-to-buffer (hatena-blog/list-noselect arg))
-  (message hatena-d-list-message))
+  (message hatena-blog--list-message))
 
 ;;;###autoload
 (defun hatena-blog/list-noselect (&optional arg)
@@ -353,7 +348,7 @@ source text with `hatena-blog/major-mode'."
   (interactive)
   (let ((entry (tabulated-list-get-id)))
     (unless entry (error "No entry at point")))
-  (hatena-blog--list-put-mark "X")
+  (hatena-blog--list-put-mark "D")
   (hatena-blog--list-apply-face 'hatena-blog/list-delete)
   (forward-line 1))
 
@@ -517,7 +512,7 @@ contents of the entry is saved as a new draft entry."
                  entries))))
 
 (defun hatena-blog--list-refresh (&optional type)
-  (setq tabulated-list-use-header-line nil
+  (setq tabulated-list-use-header-line t
         tabulated-list-format
         (vector
          `(" " 1 t)

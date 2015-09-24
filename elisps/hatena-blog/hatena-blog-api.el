@@ -57,7 +57,7 @@
 (defsubst hatena-blog/api-iso-date ()
   (format-time-string "%Y-%m-%dT%TZ" (current-time) t))
 
-(defsubst hatena-blog--api-update-entry (entry new)
+(defsubst hatena-blog/api-update-entry (entry new)
   (setf (hatena-blog/entry-id entry) (hatena-blog/entry-id new))
   (setf (hatena-blog/entry-user entry) (hatena-blog/entry-user new))
   (setf (hatena-blog/entry-title entry) (hatena-blog/entry-title new))
